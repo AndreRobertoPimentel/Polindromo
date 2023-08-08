@@ -1,0 +1,25 @@
+using System;
+
+namespace ContractionPalindrome
+{
+    class Program
+    {
+        static void Main()
+        {
+            int N = int.Parse(Console.ReadLine());
+            int[] lista = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
+
+            int operacoes = 0;
+
+            for (int i = 0; i < N / 2; i++)
+            {
+                if (lista[i] != lista[N - i - 1])
+                {
+                    operacoes++;
+                }
+            }
+
+            Console.WriteLine(operacoes);
+        }
+    }
+}
